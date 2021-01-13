@@ -27,13 +27,13 @@ func _on_Party_pressed() -> void:
 	workB.visible = false
 	partyB.visible = true
 
-
 func _on_work_pressed() -> void:
 	player_healt.current -= 1
+	deactivate()
+	Timered.start()
 	decB.visible = false
 	partyB.visible = false
 	workB.visible = true
-
 
 func _on_Timer_timeout() -> void:
 	activate()
@@ -44,6 +44,9 @@ func deactivate ():
 	Bu3.disabled = true
 
 func activate ():
+	decB.visible = true
+	workB.visible = false
+	partyB.visible = false
 	Bu1.disabled = false
 	Bu2.disabled = false
 	Bu3.disabled = false
