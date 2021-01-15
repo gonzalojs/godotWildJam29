@@ -53,20 +53,46 @@ shape = SubResource( 1 )
 position = Vector2( -160, 64 )
 
 [node name="Sprite" type="Sprite" parent="LevelLayer/WorkPanel"]
-z_index = 100
 texture = ExtResource( 10 )
 centered = false
+
+[node name="CheckButton" type="Button" parent="LevelLayer/WorkPanel"]
+margin_left = 32.0
+margin_top = 24.0
+margin_right = 140.0
+margin_bottom = 64.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckButton2" type="Button" parent="LevelLayer/WorkPanel"]
+margin_left = 40.0
+margin_top = 120.0
+margin_right = 116.0
+margin_bottom = 160.0
+
+[node name="CheckButton3" type="Button" parent="LevelLayer/WorkPanel"]
+margin_left = 40.0
+margin_top = 224.0
+margin_right = 116.0
+margin_bottom = 264.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="PartyBsck" type="Node" parent="LevelLayer"]
 
 [node name="sprite" type="Sprite" parent="LevelLayer/PartyBsck"]
 visible = false
+z_index = -1
 texture = ExtResource( 4 )
 centered = false
 
 [node name="DecBack" type="Node" parent="LevelLayer"]
 
 [node name="sprite" type="Sprite" parent="LevelLayer/DecBack"]
+visible = false
+z_index = -1
 texture = ExtResource( 5 )
 centered = false
 
@@ -74,6 +100,7 @@ centered = false
 
 [node name="sprite" type="Sprite" parent="LevelLayer/WorkBack"]
 visible = false
+z_index = -1
 texture = ExtResource( 6 )
 centered = false
 

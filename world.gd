@@ -12,6 +12,9 @@ onready var Bu2 = $LevelLayer/Button2
 onready var Bu3 = $LevelLayer/Button3
 onready var WorkPanel = $LevelLayer/WorkPanel
 onready var Tween = $Tween
+onready var wboton1 = $LevelLayer/WorkPanel/CheckButton
+onready var wboton2 = $LevelLayer/WorkPanel/CheckButton2
+onready var wboton3 = $LevelLayer/WorkPanel/CheckButton3
 
 var side = Vector2(-160, 64)
 var sideb = Vector2(0, 64)
@@ -61,6 +64,10 @@ func activate ():
 
 func workp ():
 	if dentro == false:
+		wboton1.text = 'texto uno'
+		wboton2.text = 'texto dos'
+		wboton3.text = 'texto tres'
+		
 		dentro = true
 		Tween.interpolate_property(WorkPanel, "position", side, sideb, 0.2,
 		Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
