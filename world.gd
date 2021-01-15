@@ -10,6 +10,12 @@ onready var Timered = $Timer
 onready var Bu1 = $LevelLayer/Button
 onready var Bu2 = $LevelLayer/Button2
 onready var Bu3 = $LevelLayer/Button3
+onready var WorkPanel = $LevelLayer/WorkPanel
+onready var Tween = $Tween
+
+var side = Vector2(-160, 64)
+var sideb = Vector2(0, 64)
+var dentro = false
 
 const TIME_REACTIVATE = 1
 
@@ -28,8 +34,10 @@ func _on_Party_pressed() -> void:
 	partyB.visible = true
 
 func _on_work_pressed() -> void:
+	print(WorkPanel.position)
+	workp()
 	player_healt.current -= 1
-	deactivate()
+#	deactivate()
 	Timered.start()
 	decB.visible = false
 	partyB.visible = false
@@ -50,3 +58,19 @@ func activate ():
 	Bu1.disabled = false
 	Bu2.disabled = false
 	Bu3.disabled = false
+
+func workp ():
+	if dentro == false:
+		dentro = true
+		Tween.interpolate_property(WorkPanel, "position", side, sideb, 0.2,
+		Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
+		)
+		Tween.start()
+
+	elif dentro == true:
+#		self.translate(velb)
+		Tween.interpolate_property(WorkPanel, "position", sideb, side, 0.2,
+		Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
+		)
+		Tween.start()
+		dentro = false

@@ -130,6 +130,8 @@ __meta__ = {
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
+
+[node name="Tween" type="Tween" parent="."]
 [connection signal="mouse_entered" from="LevelLayer/Map/Boton" to="LevelLayer/Map" method="_on_Boton_mouse_entered"]
 [connection signal="mouse_exited" from="LevelLayer/Map/Boton" to="LevelLayer/Map" method="_on_Boton_mouse_exited"]
 [connection signal="pressed" from="LevelLayer/Button" to="." method="_on_Party_pressed"]
