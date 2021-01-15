@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/mapCompleto.png" type="Texture" id=1]
 [ext_resource path="res://emote_drop.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://world.gd" type="Script" id=7]
 [ext_resource path="res://Health/HealthBar.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Health/Health.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/workPanel.png" type="Texture" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -46,6 +47,14 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Tween" type="Tween" parent="LevelLayer/Map"]
+
+[node name="WorkPanel" type="Node2D" parent="LevelLayer"]
+position = Vector2( -160, 64 )
+
+[node name="Sprite" type="Sprite" parent="LevelLayer/WorkPanel"]
+z_index = 100
+texture = ExtResource( 10 )
+centered = false
 
 [node name="PartyBsck" type="Node" parent="LevelLayer"]
 
