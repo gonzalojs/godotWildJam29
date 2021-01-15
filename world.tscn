@@ -33,8 +33,9 @@ z_index = 1000
 script = ExtResource( 3 )
 
 [node name="mapCompleto" type="Sprite" parent="LevelLayer/Map"]
-position = Vector2( 117.472, 40.216 )
+position = Vector2( -171.934, -84.853 )
 texture = ExtResource( 1 )
+centered = false
 
 [node name="Boton" type="Area2D" parent="LevelLayer/Map"]
 position = Vector2( 86.7385, 181.019 )
