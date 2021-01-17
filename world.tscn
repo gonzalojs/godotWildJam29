@@ -1,7 +1,6 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/mapCompleto.png" type="Texture" id=1]
-[ext_resource path="res://emote_drop.png" type="Texture" id=2]
 [ext_resource path="res://Map.gd" type="Script" id=3]
 [ext_resource path="res://assets/Party.png" type="Texture" id=4]
 [ext_resource path="res://assets/Decidiendo.png" type="Texture" id=5]
@@ -10,8 +9,6 @@
 [ext_resource path="res://Health/HealthBar.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Health/Health.tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets/workPanel.png" type="Texture" id=10]
-
-[sub_resource type="RectangleShape2D" id=1]
 
 [sub_resource type="StyleBoxFlat" id=2]
 
@@ -26,28 +23,6 @@ border_color = Color( 1, 1, 0.921569, 1 )
 script = ExtResource( 7 )
 
 [node name="LevelLayer" type="CanvasLayer" parent="."]
-
-[node name="Map" type="Node2D" parent="LevelLayer"]
-position = Vector2( 243.934, -171.147 )
-z_index = 1000
-script = ExtResource( 3 )
-
-[node name="mapCompleto" type="Sprite" parent="LevelLayer/Map"]
-position = Vector2( -171.934, -84.853 )
-texture = ExtResource( 1 )
-centered = false
-
-[node name="Boton" type="Area2D" parent="LevelLayer/Map"]
-position = Vector2( 86.7385, 181.019 )
-
-[node name="boton" type="Sprite" parent="LevelLayer/Map/Boton"]
-position = Vector2( 0.94278, -3.05176e-05 )
-texture = ExtResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelLayer/Map/Boton"]
-shape = SubResource( 1 )
-
-[node name="Tween" type="Tween" parent="LevelLayer/Map"]
 
 [node name="WorkPanel" type="Node2D" parent="LevelLayer"]
 position = Vector2( -160, 64 )
@@ -107,11 +82,53 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Map" type="Node2D" parent="LevelLayer"]
+position = Vector2( 243.934, -171.147 )
+z_index = 1000
+script = ExtResource( 3 )
+
+[node name="mapCompleto" type="Sprite" parent="LevelLayer/Map"]
+position = Vector2( -171.934, -84.853 )
+z_index = -5
+z_as_relative = false
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Tween" type="Tween" parent="LevelLayer/Map"]
+
+[node name="Travel" type="Control" parent="LevelLayer/Map"]
+margin_left = -11.934
+margin_top = 195.147
+margin_right = 212.066
+margin_bottom = 243.147
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="LevelLayer/Map/Travel"]
+visible = false
+margin_left = 56.0
+margin_top = 24.0
+margin_right = 156.0
+margin_bottom = 44.0
+
+[node name="Label" type="Label" parent="LevelLayer/Map/Travel"]
+margin_left = 16.0
+margin_top = -24.0
+margin_right = 192.0
+margin_bottom = 16.0
+text = "sssssssssss"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="PartyBsck" type="Node" parent="LevelLayer"]
 
 [node name="sprite" type="Sprite" parent="LevelLayer/PartyBsck"]
 visible = false
-z_index = -1
+z_index = -10
 texture = ExtResource( 4 )
 centered = false
 
@@ -119,7 +136,7 @@ centered = false
 
 [node name="sprite" type="Sprite" parent="LevelLayer/DecBack"]
 visible = false
-z_index = -1
+z_index = -10
 texture = ExtResource( 5 )
 centered = false
 
@@ -127,7 +144,7 @@ centered = false
 
 [node name="sprite" type="Sprite" parent="LevelLayer/WorkBack"]
 visible = false
-z_index = -1
+z_index = -10
 texture = ExtResource( 6 )
 centered = false
 
@@ -203,8 +220,6 @@ wait_time = 2.0
 one_shot = true
 
 [node name="Tween" type="Tween" parent="."]
-[connection signal="mouse_entered" from="LevelLayer/Map/Boton" to="LevelLayer/Map" method="_on_Boton_mouse_entered"]
-[connection signal="mouse_exited" from="LevelLayer/Map/Boton" to="LevelLayer/Map" method="_on_Boton_mouse_exited"]
 [connection signal="pressed" from="LevelLayer/Button" to="." method="_on_Party_pressed"]
 [connection signal="pressed" from="LevelLayer/Button2" to="." method="_on_work_pressed"]
 [connection signal="pressed" from="LevelLayer/Button3" to="LevelLayer/Map" method="_on_Button3_pressed"]

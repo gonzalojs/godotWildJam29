@@ -1,37 +1,20 @@
 extends Node2D
 
+onready var TravelPanel = $Travel
+onready var Tbutton = $Travel/Button
+onready var Ttext = $Travel/Label
+onready var tween = $Tween
+
 var inside: bool = false
 var abajo: bool = false
 var speed = 100
 var vel = Vector2(250, 95)
 var velb = Vector2(250, -170)
-onready var tween = $Tween
+var currentLocation = 'Chile'
 
-func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton:
-		if inside == true and abajo == false:
-			abajo = true
-			tween.interpolate_property(self, "position", Vector2(250, -350), vel, 0.2,
-			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
-			)
-			tween.start()
-#			self.translate(vel)
-		elif inside == true and abajo == true:
-#			self.translate(velb)
-			tween.interpolate_property(self, "position", vel, velb, 0.2,
-			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
-			)
-			tween.start()
-			abajo = false
+func _ready() -> void:
+	Ttext.text = currentLocation
 
-
-func _on_Boton_mouse_entered() -> void:
-	print(abajo)
-	inside = true
-
-
-func _on_Boton_mouse_exited() -> void:
-	inside = false
 
 
 func _on_Button3_pressed() -> void:
@@ -41,7 +24,8 @@ func _on_Button3_pressed() -> void:
 		Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
 		)
 		tween.start()
-#		self.translate(vel)
+		Tbutton.visible = true
+
 	elif abajo == true:
 #		self.translate(velb)
 		tween.interpolate_property(self, "position", vel, velb, 0.2,
@@ -49,3 +33,4 @@ func _on_Button3_pressed() -> void:
 		)
 		tween.start()
 		abajo = false
+		Tbutton.visible = false

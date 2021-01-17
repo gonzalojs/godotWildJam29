@@ -27,7 +27,8 @@ var dentro = false
 
 const TIME_REACTIVATE = 1
 
-func _ready() -> void:	
+func _ready() -> void:
+	
 	player_healt.connect("changed", healthbar, "set_value")
 	player_healt.connect("max_changed", healthbar, "set_max")
 	money.connect("changed", MoneyBar, "set_value")
