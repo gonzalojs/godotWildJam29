@@ -10,12 +10,12 @@
 [ext_resource path="res://Health/Health.tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets/workPanel.png" type="Texture" id=10]
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=1]
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.909804, 0.513726, 0.454902, 1 )
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 1, 0.729412, 0.478431, 1 )
 border_color = Color( 1, 1, 0.921569, 1 )
 
@@ -55,32 +55,29 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextEdit" type="TextEdit" parent="LevelLayer/WorkPanel"]
+[node name="TextEdit" type="Label" parent="LevelLayer/WorkPanel"]
 margin_left = 16.0
 margin_top = 16.0
 margin_right = 144.0
 margin_bottom = 56.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+align = 1
+valign = 1
 
-[node name="TextEdit2" type="TextEdit" parent="LevelLayer/WorkPanel"]
+[node name="TextEdit2" type="Label" parent="LevelLayer/WorkPanel"]
 margin_left = 16.0
 margin_top = 112.0
 margin_right = 144.0
 margin_bottom = 152.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+align = 1
+valign = 1
 
-[node name="TextEdit3" type="TextEdit" parent="LevelLayer/WorkPanel"]
+[node name="TextEdit3" type="Label" parent="LevelLayer/WorkPanel"]
 margin_left = 16.0
 margin_top = 208.0
 margin_right = 144.0
 margin_bottom = 248.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+align = 1
+valign = 1
 
 [node name="Map" type="Node2D" parent="LevelLayer"]
 position = Vector2( 243.934, -171.147 )
@@ -120,6 +117,156 @@ margin_bottom = 16.0
 text = "sssssssssss"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Santiago" type="Button" parent="LevelLayer/Map"]
+margin_left = -108.0
+margin_top = 107.0
+margin_right = -43.0
+margin_bottom = 127.0
+text = "Santiago"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buenos Aires" type="Button" parent="LevelLayer/Map"]
+margin_left = -11.934
+margin_top = 131.147
+margin_right = 53.066
+margin_bottom = 151.147
+text = "Buenos Aires"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sao Paulo" type="Button" parent="LevelLayer/Map"]
+margin_left = 12.066
+margin_top = 99.147
+margin_right = 85.066
+margin_bottom = 119.147
+text = "Sao Paulo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cape Town" type="Button" parent="LevelLayer/Map"]
+margin_left = 108.0
+margin_top = 139.0
+margin_right = 188.0
+margin_bottom = 159.0
+text = "Cape Town"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lagos" type="Button" parent="LevelLayer/Map"]
+margin_left = 52.066
+margin_top = 67.147
+margin_right = 100.066
+margin_bottom = 87.147
+text = "Lagos"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mexico City" type="Button" parent="LevelLayer/Map"]
+margin_left = -164.0
+margin_top = 43.0
+margin_right = -78.0
+margin_bottom = 63.0
+text = "Mexico City"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="New York" type="Button" parent="LevelLayer/Map"]
+margin_left = -4.0
+margin_top = 3.0
+margin_right = 67.0
+margin_bottom = 23.0
+text = "New York"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Miami" type="Button" parent="LevelLayer/Map"]
+margin_left = -28.0
+margin_top = 35.0
+margin_right = 24.0
+margin_bottom = 55.0
+text = "Miami"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ottawa" type="Button" parent="LevelLayer/Map"]
+margin_left = -100.0
+margin_top = -21.0
+margin_right = -43.0
+margin_bottom = -1.0
+text = "Ottawa"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tokyo" type="Button" parent="LevelLayer/Map"]
+margin_left = 308.066
+margin_top = 19.147
+margin_right = 357.066
+margin_bottom = 39.147
+text = "Tokyo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Beijing" type="Button" parent="LevelLayer/Map"]
+margin_left = 236.066
+margin_top = 3.147
+margin_right = 292.066
+margin_bottom = 23.147
+text = "Beijing"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Moscow" type="Button" parent="LevelLayer/Map"]
+margin_left = 196.066
+margin_top = -36.853
+margin_right = 252.066
+margin_bottom = -16.853
+text = "Moscow"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cairo" type="Button" parent="LevelLayer/Map"]
+margin_left = 164.066
+margin_top = 51.147
+margin_right = 208.066
+margin_bottom = 71.147
+text = "Cairo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hong Kong" type="Button" parent="LevelLayer/Map"]
+margin_left = 268.066
+margin_top = 67.147
+margin_right = 348.066
+margin_bottom = 87.147
+text = "Hong Kong"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sydney" type="Button" parent="LevelLayer/Map"]
+margin_left = 324.066
+margin_top = 115.147
+margin_right = 381.066
+margin_bottom = 135.147
+text = "Sydney"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -173,9 +320,9 @@ margin_left = 168.0
 margin_top = 440.0
 margin_right = 244.0
 margin_bottom = 473.0
-custom_styles/hover = SubResource( 2 )
-custom_styles/pressed = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
 text = "Travel"
 __meta__ = {
 "_edit_use_anchors_": false
