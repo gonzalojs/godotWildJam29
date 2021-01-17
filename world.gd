@@ -5,7 +5,9 @@ onready var partyB = $LevelLayer/PartyBsck/sprite
 onready var decB = $LevelLayer/DecBack/sprite
 onready var workB = $LevelLayer/WorkBack/sprite
 onready var player_healt = $LevelLayer/Health
+onready var money = $LevelLayer/Health2
 onready var healthbar = $LevelLayer/Control/HealthBar
+onready var MoneyBar = $LevelLayer/Control2/HealthBar
 onready var Timered = $Timer
 onready var Bu1 = $LevelLayer/Button
 onready var Bu2 = $LevelLayer/Button2
@@ -15,6 +17,9 @@ onready var Tween = $Tween
 onready var wboton1 = $LevelLayer/WorkPanel/CheckButton
 onready var wboton2 = $LevelLayer/WorkPanel/CheckButton2
 onready var wboton3 = $LevelLayer/WorkPanel/CheckButton3
+onready var textE1 = $LevelLayer/WorkPanel/TextEdit
+onready var textE2 = $LevelLayer/WorkPanel/TextEdit2
+onready var textE3 = $LevelLayer/WorkPanel/TextEdit3
 
 var side = Vector2(-160, 64)
 var sideb = Vector2(0, 64)
@@ -25,11 +30,16 @@ const TIME_REACTIVATE = 1
 func _ready() -> void:	
 	player_healt.connect("changed", healthbar, "set_value")
 	player_healt.connect("max_changed", healthbar, "set_max")
+	money.connect("changed", MoneyBar, "set_value")
+	money.connect("max_changed", MoneyBar, "set_max")
+	
 	
 	player_healt._initialize()
+	money._initialize()
 
 func _on_Party_pressed() -> void:
 	player_healt.current += 1
+	money.current -= 1
 	deactivate()
 	Timered.start()
 	decB.visible = false
@@ -67,6 +77,9 @@ func workp ():
 		wboton1.text = 'texto uno'
 		wboton2.text = 'texto dos'
 		wboton3.text = 'texto tres'
+		textE1.text = "pagina web"
+		textE2.text = "pagina web 2"
+		textE3.text = "pagina web furries"
 		
 		dentro = true
 		Tween.interpolate_property(WorkPanel, "position", side, sideb, 0.2,

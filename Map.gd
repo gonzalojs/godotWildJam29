@@ -3,7 +3,7 @@ extends Node2D
 var inside: bool = false
 var abajo: bool = false
 var speed = 100
-var vel = Vector2(250, 200)
+var vel = Vector2(250, 95)
 var velb = Vector2(250, -170)
 onready var tween = $Tween
 
@@ -37,7 +37,7 @@ func _on_Boton_mouse_exited() -> void:
 func _on_Button3_pressed() -> void:
 	if abajo == false:
 		abajo = true
-		tween.interpolate_property(self, "position", Vector2(250, -350), vel, 0.2,
+		tween.interpolate_property(self, "position", velb, vel, 0.2,
 		Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
 		)
 		tween.start()

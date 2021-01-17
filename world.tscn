@@ -58,7 +58,7 @@ centered = false
 
 [node name="CheckButton" type="Button" parent="LevelLayer/WorkPanel"]
 margin_left = 16.0
-margin_top = 16.0
+margin_top = 56.0
 margin_right = 144.0
 margin_bottom = 80.0
 __meta__ = {
@@ -67,15 +67,42 @@ __meta__ = {
 
 [node name="CheckButton2" type="Button" parent="LevelLayer/WorkPanel"]
 margin_left = 16.0
-margin_top = 112.0
+margin_top = 152.0
 margin_right = 144.0
 margin_bottom = 176.0
 
 [node name="CheckButton3" type="Button" parent="LevelLayer/WorkPanel"]
 margin_left = 16.0
+margin_top = 248.0
+margin_right = 144.0
+margin_bottom = 272.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="LevelLayer/WorkPanel"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 144.0
+margin_bottom = 56.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit2" type="TextEdit" parent="LevelLayer/WorkPanel"]
+margin_left = 16.0
+margin_top = 112.0
+margin_right = 144.0
+margin_bottom = 152.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit3" type="TextEdit" parent="LevelLayer/WorkPanel"]
+margin_left = 16.0
 margin_top = 208.0
 margin_right = 144.0
-margin_bottom = 280.0
+margin_bottom = 248.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -143,16 +170,33 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = -304.0
-margin_top = 40.0
+margin_top = 168.0
 margin_right = -264.0
-margin_bottom = 80.0
+margin_bottom = 208.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HealthBar" parent="LevelLayer/Control" instance=ExtResource( 8 )]
 
+[node name="Control2" type="Control" parent="LevelLayer"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -304.0
+margin_top = 208.0
+margin_right = -264.0
+margin_bottom = 248.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthBar" parent="LevelLayer/Control2" instance=ExtResource( 8 )]
+
 [node name="Health" parent="LevelLayer" instance=ExtResource( 9 )]
+
+[node name="Health2" parent="LevelLayer" instance=ExtResource( 9 )]
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
