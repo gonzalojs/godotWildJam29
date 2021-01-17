@@ -131,12 +131,33 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="CheckBox" type="CheckBox" parent="LevelLayer/Map/Santiago"]
+visible = false
+margin_left = -23.934
+margin_top = 0.147003
+margin_right = 0.0659943
+margin_bottom = 24.147
+pressed = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Buenos Aires" type="Button" parent="LevelLayer/Map"]
 margin_left = -11.934
 margin_top = 131.147
 margin_right = 53.066
 margin_bottom = 151.147
 text = "Buenos Aires"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox" type="CheckBox" parent="LevelLayer/Map/Buenos Aires"]
+visible = false
+margin_left = -24.0
+margin_top = 8.0
+margin_bottom = 32.0
+pressed = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -151,12 +172,33 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="CheckBox" type="CheckBox" parent="LevelLayer/Map/Sao Paulo"]
+visible = false
+margin_left = 72.0
+margin_right = 96.0
+margin_bottom = 24.0
+pressed = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Cape Town" type="Button" parent="LevelLayer/Map"]
 margin_left = 108.0
 margin_top = 139.0
 margin_right = 188.0
 margin_bottom = 159.0
 text = "Cape Town"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox" type="CheckBox" parent="LevelLayer/Map/Cape Town"]
+visible = false
+margin_left = 80.066
+margin_top = 0.147003
+margin_right = 104.066
+margin_bottom = 24.147
+pressed = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -171,12 +213,33 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="CheckBox" type="CheckBox" parent="LevelLayer/Map/Lagos"]
+visible = false
+margin_left = 16.0
+margin_top = -24.0
+margin_right = 40.0
+pressed = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Mexico City" type="Button" parent="LevelLayer/Map"]
 margin_left = -164.0
 margin_top = 43.0
 margin_right = -78.0
 margin_bottom = 63.0
 text = "Mexico City"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox" type="CheckBox" parent="LevelLayer/Map/Mexico City"]
+visible = false
+margin_left = 8.06599
+margin_top = -23.853
+margin_right = 32.066
+margin_bottom = 0.147003
+pressed = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -191,12 +254,34 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="CheckBox" type="CheckBox" parent="LevelLayer/Map/New York"]
+visible = false
+margin_left = 56.066
+margin_top = -23.853
+margin_right = 80.066
+margin_bottom = 0.147003
+pressed = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Miami" type="Button" parent="LevelLayer/Map"]
 margin_left = -28.0
 margin_top = 35.0
 margin_right = 24.0
 margin_bottom = 55.0
 text = "Miami"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox" type="CheckBox" parent="LevelLayer/Map/Miami"]
+visible = false
+margin_left = 16.066
+margin_top = 16.147
+margin_right = 40.066
+margin_bottom = 40.147
+pressed = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -211,12 +296,34 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="CheckBox" type="CheckBox" parent="LevelLayer/Map/Ottawa"]
+visible = false
+margin_left = 8.06599
+margin_top = -23.853
+margin_right = 32.066
+margin_bottom = 0.147003
+pressed = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Tokyo" type="Button" parent="LevelLayer/Map"]
 margin_left = 308.066
 margin_top = 19.147
 margin_right = 357.066
 margin_bottom = 39.147
 text = "Tokyo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox" type="CheckBox" parent="LevelLayer/Map/Tokyo"]
+visible = false
+margin_left = 24.0
+margin_top = 16.0
+margin_right = 48.0
+margin_bottom = 40.0
+pressed = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -231,12 +338,31 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="CheckBox" type="CheckBox" parent="LevelLayer/Map/Beijing"]
+visible = false
+margin_left = -24.0
+margin_bottom = 24.0
+pressed = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Moscow" type="Button" parent="LevelLayer/Map"]
 margin_left = 196.066
 margin_top = -36.853
 margin_right = 252.066
 margin_bottom = -16.853
 text = "Moscow"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox" type="CheckBox" parent="LevelLayer/Map/Moscow"]
+visible = false
+margin_left = 64.0
+margin_right = 88.0
+margin_bottom = 24.0
+pressed = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -251,6 +377,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="CheckBox" type="CheckBox" parent="LevelLayer/Map/Cairo"]
+visible = false
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 40.0
+margin_bottom = 40.0
+pressed = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Hong Kong" type="Button" parent="LevelLayer/Map"]
 margin_left = 268.066
 margin_top = 67.147
@@ -261,12 +398,33 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="CheckBox" type="CheckBox" parent="LevelLayer/Map/Hong Kong"]
+visible = false
+margin_left = -16.0
+margin_top = 16.0
+margin_right = 8.0
+margin_bottom = 40.0
+pressed = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Sydney" type="Button" parent="LevelLayer/Map"]
 margin_left = 324.066
 margin_top = 115.147
 margin_right = 381.066
 margin_bottom = 135.147
 text = "Sydney"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox" type="CheckBox" parent="LevelLayer/Map/Sydney"]
+visible = false
+margin_top = 16.0
+margin_right = 24.0
+margin_bottom = 40.0
+pressed = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
