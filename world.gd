@@ -20,25 +20,14 @@ onready var wboton3 = $LevelLayer/WorkPanel/CheckButton3
 onready var textE1 = $LevelLayer/WorkPanel/TextEdit
 onready var textE2 = $LevelLayer/WorkPanel/TextEdit2
 onready var textE3 = $LevelLayer/WorkPanel/TextEdit3
-onready var OttB = $LevelLayer/Map/Ottawa
-onready var MexB = $"LevelLayer/Map/Mexico City"
-onready var MiaB = $LevelLayer/Map/Miami
-onready var StgB = $LevelLayer/Map/Santiago
-onready var NyB = $"LevelLayer/Map/New York"
-onready var SPB = $"LevelLayer/Map/Sao Paulo"
-onready var BAB = $"LevelLayer/Map/Buenos Aires"
-onready var CTB = $"LevelLayer/Map/Cape Town"
-onready var LagB = $LevelLayer/Map/Lagos
-onready var CaiB = $LevelLayer/Map/Cairo
-onready var MosB = $LevelLayer/Map/Moscow
-onready var BeiB = $LevelLayer/Map/Beijing
-onready var TokB = $LevelLayer/Map/Tokyo
-onready var HKB = $"LevelLayer/Map/Hong Kong"
-onready var SydB = $LevelLayer/Map/Sydney
+
+
+
 
 var side = Vector2(-160, 64)
 var sideb = Vector2(0, 64)
 var dentro = false
+var current_location = ""
 
 const TIME_REACTIVATE = 1
 
@@ -52,6 +41,7 @@ func _ready() -> void:
 	
 	player_healt._initialize()
 	money._initialize()
+
 
 func _on_Party_pressed() -> void:
 	player_healt.current += 1
@@ -110,3 +100,8 @@ func workp ():
 		)
 		Tween.start()
 		dentro = false
+
+
+
+func _on_Button_pressed() -> void:
+	money.current -= 5
